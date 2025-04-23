@@ -1,7 +1,10 @@
+// Import npm packages
 import { Routes, Route } from "react-router-dom";
 
+// Import pages
 import Home from "./pages/Home";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
 	return (
@@ -9,6 +12,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
+					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>
 		</div>
